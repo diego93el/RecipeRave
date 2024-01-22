@@ -1,6 +1,6 @@
 # RecipeRave
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Este es el principio de mi proyecto para crear una red social basada en compartir recetas, por ahora empezaremos con la estructura base y su home page. El proyecto desde su parte front estara echo con angular 17.
 
 ## Development server
 
