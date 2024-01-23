@@ -21,7 +21,8 @@ import { CustomSidenavComponent } from "./components/custom-sidenav/custom-siden
 })
 export class AppComponent {
   title = 'RecipeRave';
+  /**Metodo para la animacion de recogida del sidenav */
   collapsed = signal(false);
-   
+  /**Delimita el ancho del sidenav */
   sidenavWidth = computed(() => this.collapsed() ? '65px' : '250px');
 }

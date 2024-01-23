@@ -1,6 +1,7 @@
 <!--Template del side bar-->
 <div class="sidenav-header">
-   <img [width]="profilePicSize()" 
+   <img 
+   [width]="profilePicSize()" 
    [height]="profilePicSize()" 
    src="/assets/profile.webp" 
    alt="profile pic">
@@ -12,13 +13,14 @@
 <mat-nav-list>
     <!--Direccion del metodo para mostrar listas desde el componente-->
     <a mat-list-item 
+    class="menu-item"
     *ngFor="let item of menuItems()" 
     [routerLink]="item.route"
-    routerLinkActive
+    routerLinkActive="selected-menu-item"
     #rla="routerLinkActive"
     [activated]="rla.isActive"
     >
-     <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+     <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>{{item.icon}}</mat-icon>
      <span matListItemTitle>{{item.label}}</span>
     </a>
 </mat-nav-list>

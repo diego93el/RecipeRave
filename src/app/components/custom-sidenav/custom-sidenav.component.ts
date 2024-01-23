@@ -19,7 +19,9 @@ export type MenuItem = {
   styleUrl: './custom-sidenav.component.css'
 })
 export class CustomSidenavComponent {
+  /**Metodo que llama al metodo de la pagina principal del sidenav */
   sideNavCollapsed = signal(false);
+  /**Decorador que llama y declara variable en booleano el metodo collapsed */
   @Input() set collapsed(val: boolean) {
     this.sideNavCollapsed.set(val);
   }
@@ -51,6 +53,6 @@ export class CustomSidenavComponent {
       route: 'settings'
     }
   ]);
-
+  /**Metodo que delimita el tamaño de la imagen del perfil */
   profilePicSize = computed (() => this.sideNavCollapsed() ? '32' : '100');
 }
