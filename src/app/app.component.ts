@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -21,4 +21,7 @@ import { CustomSidenavComponent } from "./components/custom-sidenav/custom-siden
 })
 export class AppComponent {
   title = 'RecipeRave';
+  collapsed = signal(false);
+   
+  sidenavWidth = computed(() => this.collapsed() ? '65px' : '250px');
 }

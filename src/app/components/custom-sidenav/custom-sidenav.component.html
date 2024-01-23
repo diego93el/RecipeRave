@@ -1,14 +1,23 @@
 <!--Template del side bar-->
 <div class="sidenav-header">
-   <img width="100" height="100" src="/assets/profile.webp" alt="profile pic">
-   <div class="header-text">
+   <img [width]="profilePicSize()" 
+   [height]="profilePicSize()" 
+   src="/assets/profile.webp" 
+   alt="profile pic">
+   <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
    <h2>Tu perfil</h2>
    <p>Juan Diego</p>
    </div>
 </div>
 <mat-nav-list>
     <!--Direccion del metodo para mostrar listas desde el componente-->
-    <a mat-list-item *ngFor="let item of menuItems()">
+    <a mat-list-item 
+    *ngFor="let item of menuItems()" 
+    [routerLink]="item.route"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+    >
      <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
      <span matListItemTitle>{{item.label}}</span>
     </a>
