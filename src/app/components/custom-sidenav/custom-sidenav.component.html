@@ -1,0 +1,15 @@
+<!--Template del side bar-->
+<div class="sidenav-header">
+   <img width="100" height="100" src="/assets/profile.webp" alt="profile pic">
+   <div class="header-text">
+   <h2>Tu perfil</h2>
+   <p>Juan Diego</p>
+   </div>
+</div>
+<mat-nav-list>
+    <!--Direccion del metodo para mostrar listas desde el componente-->
+    <a mat-list-item *ngFor="let item of menuItems()">
+     <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+     <span matListItemTitle>{{item.label}}</span>
+    </a>
+</mat-nav-list>
