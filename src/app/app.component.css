@@ -1,6 +1,8 @@
 mat-toolbar{
     position: relative;
     z-index: 5;
+    height: auto;
+   padding: 10px;
 }
 
 .content{
@@ -13,4 +15,36 @@ mat-sidenav-container{
 
 mat-sidenav, mat-sidenav-content{
     transition: all 500ms ease-in-out;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+  }
+
+.search {
+    --padding:14px;
+    width: max-content ;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    transition: box-shadow 0.25s ease-in-out;
+  }
+.search:focus-within{
+   box-shadow: 0 0 2px rgba(0,0, 0, 0.75);
+}
+.search-input {
+    font-size: 16px;
+    font-family: 'lexend', sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+mat-icon{
+    color: rgba(0, 0, 0, 0.25);
 }

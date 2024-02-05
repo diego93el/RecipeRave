@@ -34,7 +34,7 @@
     border-right-color: rgb(255, 255, 255);
 }
 .selected-menu-item{
-    border-left-color: rgb(255, 230, 0) ;
-    border-right-color: rgb(255, 230, 0) ;
+    border-left-color: rgb(25, 0, 255) ;
+    border-right-color: rgb(25, 0, 255) ;
     background: rgb(255, 255, 254.05);
 }
