@@ -2,8 +2,12 @@
 <mat-toolbar class="mat-elevation-z3">
   <button mat-icon-button (click)="collapsed.set (!collapsed())">
     <mat-icon>menu</mat-icon>
-    
-  </button>
+  </button> 
+  <img 
+   [width]="55" 
+   src="/assets/img/favicon.jpg" 
+   alt="profile pic">
+   Recipe Rave
   <span class="toolbar-spacer"></span>
   <form >
     <div class="search">
@@ -12,6 +16,12 @@
     </div>
   </form>
   <span class="toolbar-spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>login</mat-icon>
+  </button>
 </mat-toolbar>
 <mat-sidenav-container>
   <!--Etiqueta con metodo para que siempre se vea abierto el sidebar-->

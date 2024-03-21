@@ -3,6 +3,11 @@ mat-toolbar{
     z-index: 5;
     height: auto;
    padding: 10px;
+   > img{
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
 }
 
 .content{
